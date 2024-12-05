@@ -1,0 +1,22 @@
+# Build and push image
+docker build -t brave24/express-demo:01 .
+docker push brave24/express-demo:01
+
+# Local 
+npm install 
+node index.js
+
+# minikube cluster to view activity
+minikube start
+minikube dashboard
+
+# Create deployment & service
+kubectl apply -f deployment.yml
+kubectl apply -f service.yml
+
+# To get local machine access, use minikube service
+minikube service node-app
+
+# Check the pods, services
+kubectl get pods
+kubectl get services
