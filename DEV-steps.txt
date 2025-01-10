@@ -10,7 +10,7 @@ node index.js
 minikube start
 minikube dashboard
 
-# Create deployment & service
+# Create deployment & service (Multiple containers in single pod)
 kubectl apply -f deployment.yml
 kubectl apply -f service.yml
 
